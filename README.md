@@ -1,5 +1,7 @@
 # midi.player 
 
+most change MIDI_MAX_TRACKS to 32, totaly kills the UNO. needed more ram, arduino mega or teensy it is.
+
 ### get some mid files
 http://ascii.textfiles.com/archives/2342
 

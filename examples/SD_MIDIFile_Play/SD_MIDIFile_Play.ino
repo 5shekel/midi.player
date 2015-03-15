@@ -6,11 +6,11 @@
 //	SD card interface - change SD_SELECT for SPI comms
 //	3 LEDs (optional) - to display current status and beat. 
 //						Change pin definitions for specific hardware setup - defined below.
-
-#include <SdFat.h>
+#include <SPI.h>
+#include <SdFat.h> 
 #include <MD_MIDIFile.h>
 
-#define	USE_MIDI	1
+#define	USE_MIDI	0
 
 #if USE_MIDI // set up for direct MIDI serial output
 

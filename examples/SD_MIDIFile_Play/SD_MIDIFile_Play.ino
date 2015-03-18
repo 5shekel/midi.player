@@ -10,7 +10,7 @@
 #include <SdFat.h> 
 #include <MD_MIDIFile.h>
 
-#define	USE_MIDI	0
+#define	USE_MIDI	1
 
 #if USE_MIDI // set up for direct MIDI serial output
 
@@ -39,7 +39,7 @@
 #define SD_ERROR_LED	5	// SD error
 #define	BEAT_LED		  6	// toggles to the 'beat'
 
-#define	WAIT_DELAY	2000	// ms
+#define	WAIT_DELAY	20	// ms
 
 #define	ARRAY_SIZE(a)	(sizeof(a)/sizeof(a[0]))
 
@@ -49,8 +49,8 @@
 char *tuneList[] = 
 {
 
-	"2001.mid",  // simplest and shortest file
-	"TWINKLE.MID",
+	"katzen.mid",  // simplest and shortest file
+	//"2001.mid",
 };
 
 // These don't play as they need more than 16 tracks but will run if MIDIFile.h is changed
@@ -218,3 +218,4 @@ void loop(void)
 	  }
 	}
 }
+

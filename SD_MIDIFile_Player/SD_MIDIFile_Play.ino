@@ -3,7 +3,7 @@
 #include <SdFat.h> 
 #include <MD_MIDIFile.h>
 
-#define	USE_MIDI	1
+#define	USE_MIDI	0
 #define deadbug 0
 
 #if USE_MIDI // set up for direct MIDI serial output
@@ -157,16 +157,10 @@ void loop(void)
     DEBUG("\nFile: ");
     DEBUG(tuneList[i]);
 	  SMF.setFilename(tuneList[i]);
-	  	
-	  SMF.setTimeSignature(1,1);
-	  if(deadbug){
-	  	Serial.println();
-	  	Serial.print("post getTimeSignature() ");
-	  	Serial.print(highByte(SMF.getTimeSignature())); Serial.print("/");
-	  	Serial.println(lowByte(SMF.getTimeSignature()));
-	  }
-
 	  err = SMF.load();
+	  	  		
+		  	
+		
 	  if (err != -1)
 	  {
 		DEBUG("\nSMF load Error ");
@@ -176,14 +170,18 @@ void loop(void)
 	  }
 	  else
 	  {
-	  	SMF.setTimeSignature(1,1);
+
+	  	/*
+	  	//SMF.setTimeSignature(4,4);
 	  	if(deadbug){	
 		  	Serial.println();
 		  	Serial.print("getTimeSignature() ");
 		  	Serial.print(highByte(SMF.getTimeSignature())); Serial.print("/");
 		  	Serial.println(lowByte(SMF.getTimeSignature()));
-			//while(1){}
+			while(1){}
 	  	}
+	  	*/
+
 		// play the file
 		while (!SMF.isEOF())
 		{
@@ -192,6 +190,7 @@ void loop(void)
 		}
 
 		// done with this one
+
 		SMF.close();
 		midiSilence();
 

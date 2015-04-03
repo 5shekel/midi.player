@@ -21,3 +21,6 @@ http://www.rbjones.com/rbjpub/music/mus006.htm
 
 ##media
 ![](http://i.imgur.com/8rEniF7l.jpg)
+![](http://i.imgur.com/hCAmiOF.jpg)
+
+more images at the imgur [gallery](http://imgur.com/a/2Nlux)

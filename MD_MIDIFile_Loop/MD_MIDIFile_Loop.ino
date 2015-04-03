@@ -8,7 +8,10 @@
 #include <SdFat.h> 
 #include <MD_MIDIFile.h>
 
-#define	USE_MIDI	0
+byte byteRead;
+int tempo = 78;
+
+#define	USE_MIDI	1
 
 #if USE_MIDI // set up for direct MIDI serial output
   #define DEBUGS(s)
@@ -80,10 +83,17 @@ void setup(void)
   dump();
   SMF.setFilename(loopfile);
   err = SMF.load();
-  //SMF.setTempoAdjust(-10);
-  //SMF.setTempo(1);
-  Serial.print("getTempo(): ");
-  Serial.println(SMF.getTempo());
+  /*
+        Serial.println();
+        Serial.print("getTimeSignature() ");
+        Serial.print(highByte(SMF.getTimeSignature())); Serial.print("/");
+        Serial.println(lowByte(SMF.getTimeSignature()));
+
+        Serial.println();
+        Serial.print("getTempo() ");
+        Serial.print(SMF.getTempo()); Serial.print("/");
+        */
+
   if (err != -1)
   {
     DEBUG("\nSMF load Error ", err);
@@ -93,12 +103,37 @@ void setup(void)
 
 void loop(void)
 {
+  /*
+  if (Serial.available()) {
+    //read the most recent byte 
+    byteRead = Serial.read();
+    if(byteRead == 45 ) //asci -
+      tempo -= 10;
+    else if(byteRead == 43) //asci +
+      tempo += 10;
+    SMF.setTempoAdjust(tempo);
+  }
+  */
+
 	// play the file
 	if (!SMF.isEOF())
-	{
+	{    
+    //Serial.print("getTempo(): ");     Serial.println(SMF.getTempo());
 		SMF.getNextEvent();
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 void dump(void)
 {

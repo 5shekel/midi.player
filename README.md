@@ -14,7 +14,7 @@ if u change MIDI_MAX_TRACKS to 32, it totaly kills the UNO. needed more ram, ard
 
 
 ##media
-![](http://i.imgur.com/8rEniF7l.jpg)
+![](http://i.imgur.com/8rEniF7l.jpg)  
 more images at the imgur [gallery](http://imgur.com/a/2Nlux)
 
 ## links

@@ -2,6 +2,9 @@
 ![](http://i.imgur.com/hCAmiOF.jpg)  
 more images at the imgur [gallery](http://imgur.com/a/2Nlux)
 
+## sourcecode of insturments
+https://github.com/5shekel/robotic_band
+
 ##libraries used
 
 * [Standard MIDI Files (SMF) Processing Library](https://arduinocode.codeplex.com/releases/view/115256)
@@ -17,3 +20,4 @@ if u change MIDI_MAX_TRACKS to 32, it totaly kills the UNO. needed more ram, ard
 * get some mid files - http://ascii.textfiles.com/archives/2342
 * history of midi -http://www.midi.org/aboutmidi/tut_history.php
 * get some info - http://www.rbjones.com/rbjpub/music/mus006.htm
+

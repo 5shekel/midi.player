@@ -1,12 +1,12 @@
 # midi.player 
-
-if u change MIDI_MAX_TRACKS to 32, it totaly kills the UNO. needed more ram, arduino mega or teensy it is.
+![](http://i.imgur.com/hCAmiOF.jpg)
 
 ##libraries used
 
 * [Standard MIDI Files (SMF) Processing Library](https://arduinocode.codeplex.com/releases/view/115256)
 * [SD lib](http://arduino.cc/en/Reference/SD) -built in
 * [midi library](https://github.com/FortySevenEffects/arduino_midi_library/)
+if u change MIDI_MAX_TRACKS to 32, it totaly kills the UNO. needed more ram, arduino mega or teensy it is.
 
 ## hardware examples
 * [last darned MIDI interface](http://www.stephenhobley.com/blog/2011/03/14/the-last-darned-midi-interface-ill-ever-build/)
@@ -15,8 +15,6 @@ if u change MIDI_MAX_TRACKS to 32, it totaly kills the UNO. needed more ram, ard
 
 ##media
 ![](http://i.imgur.com/8rEniF7l.jpg)
-![](http://i.imgur.com/hCAmiOF.jpg)
-
 more images at the imgur [gallery](http://imgur.com/a/2Nlux)
 
 ## links
